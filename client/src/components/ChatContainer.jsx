@@ -21,8 +21,9 @@ function ChatContainer({selectedUser, setSelectedUser}) {
             {msg.image ? (
               <img src={msg.image} alt=" " className='max-w-[230px] border border-gray-700 rounded-lg overflow-hidden mb-8'/>
             ) : (
-              <p className={`p-2 max-w-[200px] md:text-sm font-light rounded-lg mb-8 break-all bg-violet-500/30 text-white ${msg.senderId === '680f50e4f10f3cd2838ecf9' ? 'rounded-br-none' : 'rounded-bl-none'}`}>{msg.text}</p>
+              <p className={`p-2 max-w-50 md:text-sm font-light rounded-lg mb-8 break-all bg-violet-500/30 text-white ${msg.senderId === '680f50e4f10f3cd2838ecf9' ? 'rounded-br-none' : 'rounded-bl-none'}`}>{msg.text}</p>
             )}
+            
           </div>
         ))}
       </div>
