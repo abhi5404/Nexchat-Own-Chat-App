@@ -1,5 +1,5 @@
 import React from 'react'
-import assets from '../assets/assets'
+import assets, { messagesDummyData } from '../assets/assets'
 
 function ChatContainer({selectedUser, setSelectedUser}) {
   return selectedUser ? (
@@ -16,7 +16,12 @@ function ChatContainer({selectedUser, setSelectedUser}) {
       </div>
       {/* ----- chat area ----- */}
       <div className='flex flex-col h-[calc(100%-120px)] overflow-scroll p-3 pb-6'>
-        
+        {messagesDummyData.map((msg, index) => (
+          <div key= {index} className={`flex items-end gap-2 justify-end ${msg.senderId !== '680f50e4f10f3cd2838ecf9' && 'flex-row-reverse'}`}>
+            {msg.image ? (
+              img src={msg.image} alt=" " className='max-w-[230px] border border-gray-700 rounded-lg overflow-hidden mb-8'/>
+            ) : (
+              <p></p>
       </div>
 
 
